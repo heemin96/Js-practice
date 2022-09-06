@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let user = {name: "Mike"};
+    let info = {age: 30};
+    let fe = ["Js" , "React"];
+    let lang = ["Korean", "English"];
+
+   user ={
+    ...user,
+    ...info,
+    skills: [...fe, ...lang]
+   };
+
+   console.log(user);
+</script>
+<body>
+    <div>
+        전개구문 연습
+    </div>
+</body>
+</html>
