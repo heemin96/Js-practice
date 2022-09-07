@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+//JSP 은 동기적이다.
+//호이스팅이 된 후부터 순서에 맞게 동기적으로 실행된다 
+//Hosting: var, function declartion이 제일 위로 올라감
+
+console.log('1');
+setTimeout(function(){
+    console.log('2');
+},1000);
+
+console.log('3') ;
+
+
+// Synchronous callback
+function printImmediately(print) {
+    print();
+}
+
+printImmediately(() => console.log('hello'));
+
+// Asynchronous cllaback
+function printWithDelay(print, timeout) {
+    setTimeout(print,timeout);
+}
+
+printWithDelay(()=> console.log('async callback'),2000);
+</script>
+<body>
+    
+</body>
+</html>
